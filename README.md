@@ -1,3 +1,4 @@
+[![GitHub](https://img.shields.io/github/license/devrafael-source/unity-generic-singleton)](https://github.com/devrafael-source/unity-generic-singleton/blob/master/LICENSE)
 # unity-generic-singleton
 
 
