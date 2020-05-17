@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
+public class BaseSingleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     private static T _instance = null;
-    public static T Instance
+    protected static T BaseInstance
     {
         get
         {
@@ -48,4 +48,10 @@ public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
             return _instance;
         }
     }
+#if UNITY_EDITOR
+    private void OnDestroy()
+    {
+        Debug.Log($"Singleton {typeof(T)} was deleted.", gameObject);
+    }
+#endif
 }

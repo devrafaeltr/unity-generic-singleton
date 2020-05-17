@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/rafaeldevtr/Examples/Scenes/SingletonUse.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/devrafael/Examples/Example2/Scenes/PersistentSingletonUse.unity
+    guid: 3ba12bb07df4be74a829f0d88cc717c7
+  - enabled: 1
+    path: Assets/devrafael/Examples/Example2/Scenes/PersistentSingletonUse2.unity
+    guid: e3ad38476787eb149a14cfc0ebbe87ff
   m_configObjects: {}

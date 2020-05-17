@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExampleSingleton : Singleton<ExampleSingleton>
+public class ExampleSingleton : LocalSingleton<ExampleSingleton>
 {
     public void SomeCoolFunction()
     {
