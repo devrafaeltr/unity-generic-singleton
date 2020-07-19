@@ -5,8 +5,8 @@
 ___
 ## Getting started
 ### How to install:
-1. Download and import to your project.
-2. Done!
+1. Download from [Releases](https://github.com/devrafael-source/unity-generic-singleton/files/4944678/devrafael_GenericSingleton.zip).
+2. Open your project, go to Assets > Import Package > Custom Package and choose the package OR double-click the package to import to the open project.
 
 ### How to use:
 1. Go to the class that you want to be a singleton
