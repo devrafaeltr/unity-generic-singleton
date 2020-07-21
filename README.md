@@ -16,10 +16,6 @@ ___
 ### Notes  
 Let's call your script `Example`, that inherits from `LocalSingleton`;
 
-1. `LocalSingleton` inherits from `MonoBehaviour`, so it's needed to put `Example` in a gameobject. If you call `Example` somewhere will happen case 2.
+1. If there is no `Example` in the current scene and some script is calling it, an empty `GameObject` will be created automatically and the `Example` component will be added to it.
 
-2. If there is no `Example` in the current scene and some script is calling it, an empty `GameObject` will be created automatically and the `Example` component will be added to it.
-
-3. If there is multiples `Example` in the current scene, a `Debug.LogError` will be called. This can lead to some errors, take care.
-
-4. If you're using `PersistentSingleton` a `Debug` will still be called, but the duplicates will be automatically deleted. 
+2. If there is multiples `Example` in the current scene, the new on will be deleted and a `Debug.LogError` will be called. This can lead to some errors, take care.
