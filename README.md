@@ -10,7 +10,7 @@ ___
 
 ### How to use:
 1. Go to the class that you want to be a singleton
-2. Make it inherit from `LocalSingleton` or `PersistentSingleton` and pass the class itself as parameter:  `public class Example : LocalSingleton<Example>` .
+2. Make it inherit from `LocalSingleton`, for scripts that live only in its scene, or `PersistentSingleton`, for scripts that persist through scenes, and pass the class itself as parameter:  `public class Example : LocalSingleton<Example>` .
 3. Now, anywhere, you can call ```Example.Instance``` and access any public member.
 
 ### Notes  
