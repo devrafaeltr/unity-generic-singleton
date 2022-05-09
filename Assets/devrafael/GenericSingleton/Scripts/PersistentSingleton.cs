@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PersistentSingleton<T> : BaseSingleton<T> where T : MonoBehaviour
 {
@@ -16,16 +14,19 @@ public class PersistentSingleton<T> : BaseSingleton<T> where T : MonoBehaviour
 
     protected virtual void Awake()
     {
-        if(_instance == null)
+        if (_instance == null)
         {
             _instance = Instance;
             DontDestroyOnLoad(this);
         }
         else
         {
-            #if UNITY_EDITOR
-            Debug.Log($"This scene already have a instance to {typeof(T)}. Deleting duplicates.");
-            #endif
+#if UNITY_EDITOR
+            if (SHOW_DEBUG)
+            {
+                Debug.Log($"This scene already have a instance to {typeof(T)}. Deleting duplicates.");
+            }
+#endif
             Destroy(gameObject);
         }
     }
